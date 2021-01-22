@@ -7,6 +7,7 @@
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.3",
     "@testing-library/user-event": "^12.6.0",
+    "antd": "^4.10.3",
     "form": "^0.2.4",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -14,7 +15,14 @@
     "react-scripts": "4.0.1",
     "web-vitals": "^0.2.4"
   },
+  "config": {
+    "commitizen": {
+      "path": "git-cz"
+    }
+  },
   "scripts": {
+    "format": "prettier --write \"{,!(node_modules)/**/}*.js\"",
+    "doc": "jsdoc -c jsdoc.json",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
@@ -25,7 +33,9 @@
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "eslint:recommended",
+      "plugin:react/recommended"
     ]
   },
   "browserslist": {
@@ -41,6 +51,23 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^3.1.0"
+    "@imaginary-cloud/prettier-config": "^1.0.0",
+    "eslint": "^7.18.0",
+    "gh-pages": "^3.1.0",
+    "git-cz": "^4.7.6",
+    "jsdoc": "^3.6.6",
+    "prettier": "^2.2.1"
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rakeshramesh98/Usbank-Task1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rakeshramesh98/Usbank-Task1/issues"
   }
 }
