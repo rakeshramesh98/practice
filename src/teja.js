@@ -7,7 +7,7 @@ import "./index.css";
 function Teja() {
   return (
     <div className="App">
-      <h1>Using ANTD</h1>
+      <h1>Using ANTD </h1>
       <DatePicker />
       <Button type="primary" style={{ marginLeft: 8 }}>
         Primary Button
