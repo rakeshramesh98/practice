@@ -4,7 +4,7 @@ import "./index";
 function Rakesh() {
   return (
       <div>
-          <div>ADDED FOR COMMIT</div>
+          <div>Rakesh page changed</div>
             <nav class="navbar navbar-expand-sm navbar-light bg-light">
   
                 <div class="container">
