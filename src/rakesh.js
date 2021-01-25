@@ -4,7 +4,7 @@ import "./index";
 function Rakesh() {
   return (
     <div>
-      <div>ADDED FOR COMMIT</div>
+      
       <nav className="navbar navbar-expand-sm navbar-light bg-light">
         <div className="container">
           <button
@@ -93,6 +93,7 @@ function Rakesh() {
           </div>
         </div>
       </nav>
+     
       <section id="showcase1">
         <div
           id="carouselExampleCaptions"

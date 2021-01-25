@@ -4,7 +4,7 @@ import { Button, DatePicker } from "antd";
 import "antd/dist/antd.css";
 import "./index.css";
 
-function Teja() {
+function Date() {
   return (
     <div className="App">
       <h1>Using ANTD </h1>
@@ -16,4 +16,4 @@ function Teja() {
   );
 }
 
-export default Teja;
+export default Date;

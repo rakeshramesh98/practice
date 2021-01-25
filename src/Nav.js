@@ -13,11 +13,8 @@ function Nav() {
         <Link to="/Jeevan">
           <li>Jeevan</li>
         </Link>
-        <Link to="/Teja">
-          <li>Teja</li>
-        </Link>
-        <Link to="/Nilav">
-          <li>Nilav</li>
+        <Link to="/Date">
+          <li>Date</li>
         </Link>
       </ul>
     </nav>

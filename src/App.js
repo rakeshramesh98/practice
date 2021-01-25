@@ -1,26 +1,26 @@
-import React from "react";
-import Home from "./Home";
+import React from 'react';
+import './App.css';
+import Jeevan from './Jeevan'
 import Nav from "./Nav";
-import Jeevan from "./jeevan";
-import Rakesh from "./rakesh";
-import Teja from "./teja";
-import Nilav from "./nilav";
-
+import Rakesh from "./Rakesh";
+import Date from "./Date";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 function App() {
   return (
-    <Router>
+    <div className="App App-header">
+
+      <Router>
       <div>
-        <Nav />
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/Rakesh" component={Rakesh} />
-          <Route path="/Jeevan" component={Jeevan} />
-          <Route path="/Teja" component={Teja} />
-          <Route path="/Nilav" component={Nilav} />
-        </Switch>
-      </div>
-    </Router>
+          <Nav />
+          <Switch>
+            <Route path="/Rakesh" component={Rakesh} />
+            <Route path="/Date" component={Date} />
+            <Route path="/Jeevan" component={Jeevan} />
+          </Switch>
+        </div>
+      </Router>
+    </div>
   );
 }
 
