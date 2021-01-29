@@ -4,7 +4,16 @@ import Jeevan from './Jeevan'
 import Nav from "./Nav";
 import Rakesh from "./Rakesh";
 import Date from "./Date";
+import Buttons from "./Antd/Buttons";
+import Menus from "./Antd/Menus"
+import Typo from './Antd/Typo'
+import Themes from './Antd/Themes'
+import Breadcrumbs from './Antd/Breadcrumbs'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Navigations from "./Antd/Navigations";
+import Dropdowns from "./Antd/Dropdowns";
+import Paginations from "./Antd/Paginations";
+import Pageheaders from "./Antd/Pageheaders";
 import Antd from "./Antd";
 import Basic from './Antd/basic';
 import Lookup from './Antd/Lookup';
@@ -66,7 +75,15 @@ function App() {
             <Route path="/Flexstretch" component={Flexstretch} />
             <Route path="/Gutter" component={Gutter} />
             <Route path="/Typesetting" component={Typesetting} />
-
+            <Route path="/Buttons" component={Buttons} />
+            <Route path="/Typo" component={Typo} />
+            <Route path="/Navigations" component={Navigations} />
+            <Route path="/Breadcrumbs" component={Breadcrumbs} />
+            <Route path="/Dropdowns" component={Dropdowns} />
+            <Route path="/Menus" component={Menus} />
+            <Route path="/Themes" component={Themes} />
+            <Route path="/Paginations" component={Paginations} />
+            <Route path="/Pageheaders" component={Pageheaders} />
 
           </Switch>
         </div>

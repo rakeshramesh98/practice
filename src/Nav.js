@@ -99,6 +99,30 @@ function Nav() {
         <Link to="/Typesetting">
           <li>Typesetting</li>
         </Link>
+        <Link to="/Typo">
+          <li>Typography</li>
+        </Link>
+        <Link to="/Navigations">
+          <li>Navigations</li>
+        </Link>
+        <Link to="/Breadcrumbs">
+          <li>Breadcrumbs</li>
+        </Link>
+        <Link to="/Buttons">
+          <li>Buttons</li>
+        </Link>
+        <Link to="/Dropdowns">
+          <li>Dropdowns</li>
+        </Link>
+        <Link to="/Menus">
+          <li>Menus</li>
+        </Link>
+        <Link to="/Paginations">
+          <li>Paginations</li>
+        </Link>
+        <Link to="/Pageheaders">
+          <li>Pageheaders</li>
+        </Link>
       </ul>
     </nav>
   );
