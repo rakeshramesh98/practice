@@ -39,13 +39,19 @@ import Withouttitle from './Antd/Withouttitle';
 import Flexstretch from './Antd/Flexstretch';
 import Gutter from './Antd/Gutter';
 import Typesetting from './Antd/Typesetting';
+import Footer from './Footer'
+import Navbar from './Navbar'
+
 function App() {
   return (
     <div className="App App-header">
-
+      <Navbar/>
       <Router>
-      <div>
-          <Nav />
+      <div className="row">
+        <div className="col-md-2">
+        <Nav />
+        </div>
+          <div className="col-md-10 mt-4">
           <Switch>
             <Route path="/Rakesh" component={Rakesh} />
             <Route path="/Date" component={Date} />
@@ -86,8 +92,12 @@ function App() {
             <Route path="/Pageheaders" component={Pageheaders} />
 
           </Switch>
+          <Footer />
+          </div>
+          
         </div>
       </Router>
+      
     </div>
   );
 }

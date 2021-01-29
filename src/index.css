@@ -350,6 +350,18 @@ background-size:100%;
   left: 100%;
 }
 }
+.nav2 li {
+  padding: 20px;
+  display: inline !important;
+}
+
+.nav2 li a{
+  padding: 10px;
+  color: black !important;
+}
+.nav2{
+  color: black !important;
+}
 
 /*************footer End*****************/
 
