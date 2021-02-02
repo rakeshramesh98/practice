@@ -1,8 +1,8 @@
-import React from 'react';
-import 'antd/dist/antd.css';
-import './index.css';
-import { Input, Select } from 'antd';
-import { SettingOutlined } from '@ant-design/icons';
+import React from "react";
+import "antd/dist/antd.css";
+import "./index.css";
+import { Input, Select } from "antd";
+import { SettingOutlined } from "@ant-design/icons";
 
 const { Option } = Select;
 
@@ -22,20 +22,25 @@ const selectAfter = (
 );
 
 function Prepost() {
-    return(
-        <>
-        <div style={{ marginBottom: 16 }}>
-          <Input addonBefore="http://" addonAfter=".com" defaultValue="mysite" />
-        </div>
-        <div style={{ marginBottom: 16 }}>
-          <Input addonBefore={selectBefore} addonAfter={selectAfter} defaultValue="mysite" />
-        </div>
-        <div style={{ marginBottom: 16 }}>
-          <Input addonAfter={<SettingOutlined />} defaultValue="mysite" />
-        </div>
-        <div style={{ marginBottom: 16 }}>
-          <Input addonBefore="http://" suffix=".com" defaultValue="mysite" />
-        </div>
-      </>
-    )
-} export default Prepost;
+  return (
+    <>
+      <div style={{ marginBottom: 16 }}>
+        <Input addonBefore="http://" addonAfter=".com" defaultValue="mysite" />
+      </div>
+      <div style={{ marginBottom: 16 }}>
+        <Input
+          addonBefore={selectBefore}
+          addonAfter={selectAfter}
+          defaultValue="mysite"
+        />
+      </div>
+      <div style={{ marginBottom: 16 }}>
+        <Input addonAfter={<SettingOutlined />} defaultValue="mysite" />
+      </div>
+      <div style={{ marginBottom: 16 }}>
+        <Input addonBefore="http://" suffix=".com" defaultValue="mysite" />
+      </div>
+    </>
+  );
+}
+export default Prepost;

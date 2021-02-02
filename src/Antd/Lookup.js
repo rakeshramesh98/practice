@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import 'antd/dist/antd.css';
-import './index.css';
-import { Input, AutoComplete } from 'antd';
+import React, { useState } from "react";
+import "antd/dist/antd.css";
+import "./index.css";
+import { Input, AutoComplete } from "antd";
 
 function getRandomInt(max, min = 0) {
   return Math.floor(Math.random() * (max - min + 1)) + min; // eslint-disable-line no-mixed-operators
@@ -9,8 +9,8 @@ function getRandomInt(max, min = 0) {
 
 const Complete = (query) => {
   return new Array(getRandomInt(5))
-    .join('.')
-    .split('.')
+    .join(".")
+    .split(".")
     .map((_, idx) => {
       const category = `${query}${idx}`;
       return {
@@ -18,12 +18,12 @@ const Complete = (query) => {
         label: (
           <div
             style={{
-              display: 'flex',
-              justifyContent: 'space-between',
+              display: "flex",
+              justifyContent: "space-between",
             }}
           >
             <span>
-              Found {query} on{' '}
+              Found {query} on{" "}
               <a
                 href={`https://s.taobao.com/search?q=${query}`}
                 target="_blank"
@@ -47,7 +47,7 @@ const Lookup = () => {
   };
 
   const onSelect = (value) => {
-    console.log('onSelect', value);
+    console.log("onSelect", value);
   };
 
   return (

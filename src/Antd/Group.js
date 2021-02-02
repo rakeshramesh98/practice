@@ -1,38 +1,47 @@
-import React from 'react';
-import 'antd/dist/antd.css';
-import './index.css';
-import { Input, Col, Row, Select, InputNumber, DatePicker, AutoComplete, Cascader } from 'antd';
+import React from "react";
+import "antd/dist/antd.css";
+import "./index.css";
+import {
+  Input,
+  Col,
+  Row,
+  Select,
+  InputNumber,
+  DatePicker,
+  AutoComplete,
+  Cascader,
+} from "antd";
 
 const { Option } = Select;
 
 const options = [
   {
-    value: 'zhejiang',
-    label: 'Zhejiang',
+    value: "zhejiang",
+    label: "Zhejiang",
     children: [
       {
-        value: 'hangzhou',
-        label: 'Hangzhou',
+        value: "hangzhou",
+        label: "Hangzhou",
         children: [
           {
-            value: 'xihu',
-            label: 'West Lake',
+            value: "xihu",
+            label: "West Lake",
           },
         ],
       },
     ],
   },
   {
-    value: 'jiangsu',
-    label: 'Jiangsu',
+    value: "jiangsu",
+    label: "Jiangsu",
     children: [
       {
-        value: 'nanjing',
-        label: 'Nanjing',
+        value: "nanjing",
+        label: "Nanjing",
         children: [
           {
-            value: 'zhonghuamen',
-            label: 'Zhong Hua Men',
+            value: "zhonghuamen",
+            label: "Zhong Hua Men",
           },
         ],
       },
@@ -54,8 +63,8 @@ const Group = () => (
     </Input.Group>
     <br />
     <Input.Group compact>
-      <Input style={{ width: '20%' }} defaultValue="0571" />
-      <Input style={{ width: '30%' }} defaultValue="26888888" />
+      <Input style={{ width: "20%" }} defaultValue="0571" />
+      <Input style={{ width: "30%" }} defaultValue="26888888" />
     </Input.Group>
     <br />
     <Input.Group compact>
@@ -63,17 +72,25 @@ const Group = () => (
         <Option value="Zhejiang">Zhejiang</Option>
         <Option value="Jiangsu">Jiangsu</Option>
       </Select>
-      <Input style={{ width: '50%' }} defaultValue="Xihu District, Hangzhou" />
+      <Input style={{ width: "50%" }} defaultValue="Xihu District, Hangzhou" />
     </Input.Group>
     <br />
     <Input.Group compact>
-      <Input.Search style={{ width: '40%' }} defaultValue="0571" />
-      <Input.Search allowClear style={{ width: '40%' }} defaultValue="26888888" />
+      <Input.Search style={{ width: "40%" }} defaultValue="0571" />
+      <Input.Search
+        allowClear
+        style={{ width: "40%" }}
+        defaultValue="26888888"
+      />
     </Input.Group>
     <br />
     <Input.Group compact>
-      <Input.Search allowClear style={{ width: '40%' }} defaultValue="0571" />
-      <Input.Search allowClear style={{ width: '40%' }} defaultValue="26888888" />
+      <Input.Search allowClear style={{ width: "40%" }} defaultValue="0571" />
+      <Input.Search
+        allowClear
+        style={{ width: "40%" }}
+        defaultValue="26888888"
+      />
     </Input.Group>
     <br />
     <Input.Group compact>
@@ -81,18 +98,18 @@ const Group = () => (
         <Option value="Option1">Option1</Option>
         <Option value="Option2">Option2</Option>
       </Select>
-      <Input style={{ width: '50%' }} defaultValue="input content" />
+      <Input style={{ width: "50%" }} defaultValue="input content" />
       <InputNumber />
     </Input.Group>
     <br />
     <Input.Group compact>
-      <Input style={{ width: '50%' }} defaultValue="input content" />
-      <DatePicker style={{ width: '50%' }} />
+      <Input style={{ width: "50%" }} defaultValue="input content" />
+      <DatePicker style={{ width: "50%" }} />
     </Input.Group>
     <br />
     <Input.Group compact>
-      <Input style={{ width: '30%' }} defaultValue="input content" />
-      <DatePicker.RangePicker style={{ width: '70%' }} />
+      <Input style={{ width: "30%" }} defaultValue="input content" />
+      <DatePicker.RangePicker style={{ width: "70%" }} />
     </Input.Group>
     <br />
     <Input.Group compact>
@@ -111,14 +128,17 @@ const Group = () => (
         <Option value="1">Between</Option>
         <Option value="2">Except</Option>
       </Select>
-      <Input style={{ width: 100, textAlign: 'center' }} placeholder="Minimum" />
+      <Input
+        style={{ width: 100, textAlign: "center" }}
+        placeholder="Minimum"
+      />
       <Input
         className="site-input-split"
         style={{
           width: 30,
           borderLeft: 0,
           borderRight: 0,
-          pointerEvents: 'none',
+          pointerEvents: "none",
         }}
         placeholder="~"
         disabled
@@ -127,30 +147,34 @@ const Group = () => (
         className="site-input-right"
         style={{
           width: 100,
-          textAlign: 'center',
+          textAlign: "center",
         }}
         placeholder="Maximum"
       />
     </Input.Group>
     <br />
     <Input.Group compact>
-      <Select defaultValue="Sign Up" style={{ width: '30%' }}>
+      <Select defaultValue="Sign Up" style={{ width: "30%" }}>
         <Option value="Sign Up">Sign Up</Option>
         <Option value="Sign In">Sign In</Option>
       </Select>
       <AutoComplete
-        style={{ width: '70%' }}
+        style={{ width: "70%" }}
         placeholder="Email"
-        options={[{ value: 'text 1' }, { value: 'text 2' }]}
+        options={[{ value: "text 1" }, { value: "text 2" }]}
       />
     </Input.Group>
     <br />
     <Input.Group compact>
-      <Select style={{ width: '30%' }} defaultValue="Home">
+      <Select style={{ width: "30%" }} defaultValue="Home">
         <Option value="Home">Home</Option>
         <Option value="Company">Company</Option>
       </Select>
-      <Cascader style={{ width: '70%' }} options={options} placeholder="Select Address" />
+      <Cascader
+        style={{ width: "70%" }}
+        options={options}
+        placeholder="Select Address"
+      />
     </Input.Group>
   </div>
 );

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import 'antd/dist/antd.css';
-import './index.css';
+import React, { useState } from "react";
+import "antd/dist/antd.css";
+import "./index.css";
 import {
   Form,
   Input,
@@ -12,37 +12,37 @@ import {
   Checkbox,
   Button,
   AutoComplete,
-} from 'antd';
-import { QuestionCircleOutlined } from '@ant-design/icons';
+} from "antd";
+import { QuestionCircleOutlined } from "@ant-design/icons";
 const { Option } = Select;
 const residences = [
   {
-    value: 'zhejiang',
-    label: 'Zhejiang',
+    value: "zhejiang",
+    label: "Zhejiang",
     children: [
       {
-        value: 'hangzhou',
-        label: 'Hangzhou',
+        value: "hangzhou",
+        label: "Hangzhou",
         children: [
           {
-            value: 'xihu',
-            label: 'West Lake',
+            value: "xihu",
+            label: "West Lake",
           },
         ],
       },
     ],
   },
   {
-    value: 'jiangsu',
-    label: 'Jiangsu',
+    value: "jiangsu",
+    label: "Jiangsu",
     children: [
       {
-        value: 'nanjing',
-        label: 'Nanjing',
+        value: "nanjing",
+        label: "Nanjing",
         children: [
           {
-            value: 'zhonghuamen',
-            label: 'Zhong Hua Men',
+            value: "zhonghuamen",
+            label: "Zhong Hua Men",
           },
         ],
       },
@@ -80,11 +80,11 @@ const tailFormItemLayout = {
   },
 };
 
-const Registration= () => {
+const Registration = () => {
   const [form] = Form.useForm();
 
   const onFinish = (values) => {
-    console.log('Received values of form: ', values);
+    console.log("Received values of form: ", values);
   };
 
   const prefixSelector = (
@@ -105,7 +105,9 @@ const Registration= () => {
     if (!value) {
       setAutoCompleteResult([]);
     } else {
-      setAutoCompleteResult(['.com', '.org', '.net'].map((domain) => `${value}${domain}`));
+      setAutoCompleteResult(
+        [".com", ".org", ".net"].map((domain) => `${value}${domain}`)
+      );
     }
   };
 
@@ -120,8 +122,8 @@ const Registration= () => {
       name="register"
       onFinish={onFinish}
       initialValues={{
-        residence: ['zhejiang', 'hangzhou', 'xihu'],
-        prefix: '86',
+        residence: ["zhejiang", "hangzhou", "xihu"],
+        prefix: "86",
       }}
       scrollToFirstError
     >
@@ -130,12 +132,12 @@ const Registration= () => {
         label="E-mail"
         rules={[
           {
-            type: 'email',
-            message: 'The input is not valid E-mail!',
+            type: "email",
+            message: "The input is not valid E-mail!",
           },
           {
             required: true,
-            message: 'Please input your E-mail!',
+            message: "Please input your E-mail!",
           },
         ]}
       >
@@ -148,7 +150,7 @@ const Registration= () => {
         rules={[
           {
             required: true,
-            message: 'Please input your password!',
+            message: "Please input your password!",
           },
         ]}
         hasFeedback
@@ -159,20 +161,22 @@ const Registration= () => {
       <Form.Item
         name="confirm"
         label="Confirm Password"
-        dependencies={['password']}
+        dependencies={["password"]}
         hasFeedback
         rules={[
           {
             required: true,
-            message: 'Please confirm your password!',
+            message: "Please confirm your password!",
           },
           ({ getFieldValue }) => ({
             validator(_, value) {
-              if (!value || getFieldValue('password') === value) {
+              if (!value || getFieldValue("password") === value) {
                 return Promise.resolve();
               }
 
-              return Promise.reject('The two passwords that you entered do not match!');
+              return Promise.reject(
+                "The two passwords that you entered do not match!"
+              );
             },
           }),
         ]}
@@ -193,7 +197,7 @@ const Registration= () => {
         rules={[
           {
             required: true,
-            message: 'Please input your nickname!',
+            message: "Please input your nickname!",
             whitespace: true,
           },
         ]}
@@ -206,9 +210,9 @@ const Registration= () => {
         label="Habitual Residence"
         rules={[
           {
-            type: 'array',
+            type: "array",
             required: true,
-            message: 'Please select your habitual residence!',
+            message: "Please select your habitual residence!",
           },
         ]}
       >
@@ -221,14 +225,14 @@ const Registration= () => {
         rules={[
           {
             required: true,
-            message: 'Please input your phone number!',
+            message: "Please input your phone number!",
           },
         ]}
       >
         <Input
           addonBefore={prefixSelector}
           style={{
-            width: '100%',
+            width: "100%",
           }}
         />
       </Form.Item>
@@ -239,16 +243,23 @@ const Registration= () => {
         rules={[
           {
             required: true,
-            message: 'Please input website!',
+            message: "Please input website!",
           },
         ]}
       >
-        <AutoComplete options={websiteOptions} onChange={onWebsiteChange} placeholder="website">
+        <AutoComplete
+          options={websiteOptions}
+          onChange={onWebsiteChange}
+          placeholder="website"
+        >
           <Input />
         </AutoComplete>
       </Form.Item>
 
-      <Form.Item label="Captcha" extra="We must make sure that your are a human.">
+      <Form.Item
+        label="Captcha"
+        extra="We must make sure that your are a human."
+      >
         <Row gutter={8}>
           <Col span={12}>
             <Form.Item
@@ -257,7 +268,7 @@ const Registration= () => {
               rules={[
                 {
                   required: true,
-                  message: 'Please input the captcha you got!',
+                  message: "Please input the captcha you got!",
                 },
               ]}
             >
@@ -276,7 +287,9 @@ const Registration= () => {
         rules={[
           {
             validator: (_, value) =>
-              value ? Promise.resolve() : Promise.reject('Should accept agreement'),
+              value
+                ? Promise.resolve()
+                : Promise.reject("Should accept agreement"),
           },
         ]}
         {...tailFormItemLayout}

@@ -1,12 +1,12 @@
-import React from 'react';
-import 'antd/dist/antd.css';
-import './index.css';
-import { Form, Input, Button, Space } from 'antd';
-import { MinusCircleOutlined, PlusOutlined } from '@ant-design/icons';
+import React from "react";
+import "antd/dist/antd.css";
+import "./index.css";
+import { Form, Input, Button, Space } from "antd";
+import { MinusCircleOutlined, PlusOutlined } from "@ant-design/icons";
 
 const Demo = () => {
-  const onFinish = values => {
-    console.log('Received values of form:', values);
+  const onFinish = (values) => {
+    console.log("Received values of form:", values);
   };
 
   return (
@@ -14,21 +14,25 @@ const Demo = () => {
       <Form.List name="users">
         {(fields, { add, remove }) => (
           <>
-            {fields.map(field => (
-              <Space key={field.key} style={{ display: 'flex', marginBottom: 8 }} align="baseline">
+            {fields.map((field) => (
+              <Space
+                key={field.key}
+                style={{ display: "flex", marginBottom: 8 }}
+                align="baseline"
+              >
                 <Form.Item
                   {...field}
-                  name={[field.name, 'first']}
-                  fieldKey={[field.fieldKey, 'first']}
-                  rules={[{ required: true, message: 'Missing first name' }]}
+                  name={[field.name, "first"]}
+                  fieldKey={[field.fieldKey, "first"]}
+                  rules={[{ required: true, message: "Missing first name" }]}
                 >
                   <Input placeholder="First Name" />
                 </Form.Item>
                 <Form.Item
                   {...field}
-                  name={[field.name, 'last']}
-                  fieldKey={[field.fieldKey, 'last']}
-                  rules={[{ required: true, message: 'Missing last name' }]}
+                  name={[field.name, "last"]}
+                  fieldKey={[field.fieldKey, "last"]}
+                  rules={[{ required: true, message: "Missing last name" }]}
                 >
                   <Input placeholder="Last Name" />
                 </Form.Item>
@@ -36,7 +40,12 @@ const Demo = () => {
               </Space>
             ))}
             <Form.Item>
-              <Button type="dashed" onClick={() => add()} block icon={<PlusOutlined />}>
+              <Button
+                type="dashed"
+                onClick={() => add()}
+                block
+                icon={<PlusOutlined />}
+              >
                 Add field
               </Button>
             </Form.Item>

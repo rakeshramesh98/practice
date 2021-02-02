@@ -1,6 +1,6 @@
-import React from 'react';
-import 'antd/dist/antd.css';
-import './index.css';
+import React from "react";
+import "antd/dist/antd.css";
+import "./index.css";
 import {
   Form,
   Select,
@@ -14,8 +14,8 @@ import {
   Checkbox,
   Row,
   Col,
-} from 'antd';
-import { UploadOutlined, InboxOutlined } from '@ant-design/icons';
+} from "antd";
+import { UploadOutlined, InboxOutlined } from "@ant-design/icons";
 const { Option } = Select;
 const formItemLayout = {
   labelCol: {
@@ -27,7 +27,7 @@ const formItemLayout = {
 };
 
 const normFile = (e) => {
-  console.log('Upload event:', e);
+  console.log("Upload event:", e);
 
   if (Array.isArray(e)) {
     return e;
@@ -38,7 +38,7 @@ const normFile = (e) => {
 
 const Otherlayout = () => {
   const onFinish = (values) => {
-    console.log('Received values of form: ', values);
+    console.log("Received values of form: ", values);
   };
 
   return (
@@ -47,8 +47,8 @@ const Otherlayout = () => {
       {...formItemLayout}
       onFinish={onFinish}
       initialValues={{
-        ['input-number']: 3,
-        ['checkbox-group']: ['A', 'B'],
+        ["input-number"]: 3,
+        ["checkbox-group"]: ["A", "B"],
         rate: 3.5,
       }}
     >
@@ -62,7 +62,7 @@ const Otherlayout = () => {
         rules={[
           {
             required: true,
-            message: 'Please select your country!',
+            message: "Please select your country!",
           },
         ]}
       >
@@ -78,8 +78,8 @@ const Otherlayout = () => {
         rules={[
           {
             required: true,
-            message: 'Please select your favourite colors!',
-            type: 'array',
+            message: "Please select your favourite colors!",
+            type: "array",
           },
         ]}
       >
@@ -104,12 +104,12 @@ const Otherlayout = () => {
       <Form.Item name="slider" label="Slider">
         <Slider
           marks={{
-            0: 'A',
-            20: 'B',
-            40: 'C',
-            60: 'D',
-            80: 'E',
-            100: 'F',
+            0: "A",
+            20: "B",
+            40: "C",
+            60: "D",
+            80: "E",
+            100: "F",
           }}
         />
       </Form.Item>
@@ -128,7 +128,7 @@ const Otherlayout = () => {
         rules={[
           {
             required: true,
-            message: 'Please pick an item!',
+            message: "Please pick an item!",
           },
         ]}
       >
@@ -146,7 +146,7 @@ const Otherlayout = () => {
               <Checkbox
                 value="A"
                 style={{
-                  lineHeight: '32px',
+                  lineHeight: "32px",
                 }}
               >
                 A
@@ -156,7 +156,7 @@ const Otherlayout = () => {
               <Checkbox
                 value="B"
                 style={{
-                  lineHeight: '32px',
+                  lineHeight: "32px",
                 }}
                 disabled
               >
@@ -167,7 +167,7 @@ const Otherlayout = () => {
               <Checkbox
                 value="C"
                 style={{
-                  lineHeight: '32px',
+                  lineHeight: "32px",
                 }}
               >
                 C
@@ -177,7 +177,7 @@ const Otherlayout = () => {
               <Checkbox
                 value="D"
                 style={{
-                  lineHeight: '32px',
+                  lineHeight: "32px",
                 }}
               >
                 D
@@ -187,7 +187,7 @@ const Otherlayout = () => {
               <Checkbox
                 value="E"
                 style={{
-                  lineHeight: '32px',
+                  lineHeight: "32px",
                 }}
               >
                 E
@@ -197,7 +197,7 @@ const Otherlayout = () => {
               <Checkbox
                 value="F"
                 style={{
-                  lineHeight: '32px',
+                  lineHeight: "32px",
                 }}
               >
                 F
@@ -224,13 +224,22 @@ const Otherlayout = () => {
       </Form.Item>
 
       <Form.Item label="Dragger">
-        <Form.Item name="dragger" valuePropName="fileList" getValueFromEvent={normFile} noStyle>
+        <Form.Item
+          name="dragger"
+          valuePropName="fileList"
+          getValueFromEvent={normFile}
+          noStyle
+        >
           <Upload.Dragger name="files" action="/upload.do">
             <p className="ant-upload-drag-icon">
               <InboxOutlined />
             </p>
-            <p className="ant-upload-text">Click or drag file to this area to upload</p>
-            <p className="ant-upload-hint">Support for a single or bulk upload.</p>
+            <p className="ant-upload-text">
+              Click or drag file to this area to upload
+            </p>
+            <p className="ant-upload-hint">
+              Support for a single or bulk upload.
+            </p>
           </Upload.Dragger>
         </Form.Item>
       </Form.Item>

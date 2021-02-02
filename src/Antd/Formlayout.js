@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import 'antd/dist/antd.css';
-import './index.css';
+import React, { useState } from "react";
+import "antd/dist/antd.css";
+import "./index.css";
 import {
   Form,
   Input,
@@ -12,10 +12,10 @@ import {
   InputNumber,
   TreeSelect,
   Switch,
-} from 'antd';
+} from "antd";
 
 const Formlayout = () => {
-  const [componentSize, setComponentSize] = useState('default');
+  const [componentSize, setComponentSize] = useState("default");
 
   const onFormLayoutChange = ({ size }) => {
     setComponentSize(size);
@@ -56,12 +56,12 @@ const Formlayout = () => {
           <TreeSelect
             treeData={[
               {
-                title: 'Light',
-                value: 'light',
+                title: "Light",
+                value: "light",
                 children: [
                   {
-                    title: 'Bamboo',
-                    value: 'bamboo',
+                    title: "Bamboo",
+                    value: "bamboo",
                   },
                 ],
               },
@@ -72,12 +72,12 @@ const Formlayout = () => {
           <Cascader
             options={[
               {
-                value: 'zhejiang',
-                label: 'Zhejiang',
+                value: "zhejiang",
+                label: "Zhejiang",
                 children: [
                   {
-                    value: 'hangzhou',
-                    label: 'Hangzhou',
+                    value: "hangzhou",
+                    label: "Hangzhou",
                   },
                 ],
               },

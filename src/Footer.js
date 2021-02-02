@@ -1,8 +1,8 @@
-import React from 'react'
-export default function Footer(){
-    return(
-        <div>
-            <footer className="new_footer_area bg_color">
+import React from "react";
+export default function Footer() {
+  return (
+    <div>
+      <footer className="new_footer_area bg_color">
         <div className="new_footer_top">
           <div className="container">
             <div className="row">
@@ -117,6 +117,6 @@ export default function Footer(){
           </div>
         </div>
       </footer>
-        </div>
-    )
+    </div>
+  );
 }

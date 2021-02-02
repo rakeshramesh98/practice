@@ -1,16 +1,16 @@
-import React from 'react';
-import 'antd/dist/antd.css';
-import './index.css';
-import { AutoComplete } from 'antd';
+import React from "react";
+import "antd/dist/antd.css";
+import "./index.css";
+import { AutoComplete } from "antd";
 const options = [
   {
-    value: 'Burns Bay Road',
+    value: "Burns Bay Road",
   },
   {
-    value: 'Downing Street',
+    value: "Downing Street",
   },
   {
-    value: 'Wall Street',
+    value: "Wall Street",
   },
 ];
 

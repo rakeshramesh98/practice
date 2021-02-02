@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import 'antd/dist/antd.css';
-import './index.css';
-import { AutoComplete } from 'antd';
+import React, { useState } from "react";
+import "antd/dist/antd.css";
+import "./index.css";
+import { AutoComplete } from "antd";
 
 const mockVal = (str, repeat = 1) => {
   return {
@@ -10,17 +10,19 @@ const mockVal = (str, repeat = 1) => {
 };
 
 const Basic = () => {
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState("");
   const [options, setOptions] = useState([]);
 
   const onSearch = (searchText) => {
     setOptions(
-      !searchText ? [] : [mockVal(searchText), mockVal(searchText, 2), mockVal(searchText, 3)],
+      !searchText
+        ? []
+        : [mockVal(searchText), mockVal(searchText, 2), mockVal(searchText, 3)]
     );
   };
 
   const onSelect = (data) => {
-    console.log('onSelect', data);
+    console.log("onSelect", data);
   };
 
   const onChange = (data) => {

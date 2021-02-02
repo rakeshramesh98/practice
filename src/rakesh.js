@@ -1,11 +1,10 @@
 import React from "react";
 import "./index";
-import Footer from './Footer'
+import Footer from "./Footer";
 
 function Rakesh() {
   return (
     <div>
-      
       <nav className="navbar navbar-expand-sm navbar-light bg-light">
         <div className="container">
           <button
@@ -94,7 +93,7 @@ function Rakesh() {
           </div>
         </div>
       </nav>
-     
+
       <section id="showcase1">
         <div
           id="carouselExampleCaptions"
@@ -252,7 +251,7 @@ function Rakesh() {
         </div>
       </section>
 
-      <Footer/>
+      <Footer />
     </div>
   );
 }
