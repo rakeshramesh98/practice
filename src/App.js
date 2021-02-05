@@ -2,8 +2,6 @@ import React from "react";
 import "./App.css";
 import Jeevan from "./Jeevan";
 import Nav from "./Nav";
-import Rakesh from "./Rakesh";
-import Date from "./Date";
 import Buttons from "./Antd/Buttons";
 import Menus from "./Antd/Menus";
 import Typo from "./Antd/Typo";
@@ -53,8 +51,6 @@ function App() {
           </div>
           <div className="col-md-10 mt-4">
             <Switch>
-              <Route path="/Rakesh" component={Rakesh} />
-              <Route path="/Date" component={Date} />
               <Route path="/Jeevan" component={Jeevan} />
               <Route path="/Antd" component={Antd} />
               <Route path="/Basic" component={Basic} />
@@ -87,7 +83,7 @@ function App() {
               <Route path="/Breadcrumbs" component={Breadcrumbs} />
               <Route path="/Dropdowns" component={Dropdowns} />
               <Route path="/Menus" component={Menus} />
-              <Route path="/Themes" component={Themes} />
+              <Route path="/Themess" component={Themes} />
               <Route path="/Paginations" component={Paginations} />
               <Route path="/Pageheaders" component={Pageheaders} />
             </Switch>
