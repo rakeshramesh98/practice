@@ -45,6 +45,8 @@ function App() {
     <div className="App App-header">
       <Navbar />
      
+      
+      <Router>
         <div className="row">
           <div className="col-md-2">
             <Nav />
