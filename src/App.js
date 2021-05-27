@@ -43,7 +43,7 @@ import Navbar from "./Navbar";
 function App() {
   return (
     <div className="App App-header">
-      <Navbar />
+      
       <Router>
         <div className="row">
           <div className="col-md-2">
