@@ -49,7 +49,7 @@ function App() {
           <div className="col-md-2">
             <Nav />
           </div>
-          <div className="col-md-10 mt-4">
+          <div className="mt-4">
             <Switch>
               <Route path="/Jeevan" component={Jeevan} />
               <Route path="/Antd" component={Antd} />
